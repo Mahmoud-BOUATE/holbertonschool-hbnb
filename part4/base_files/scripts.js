@@ -9,12 +9,10 @@ let allPlaces = []; // stocke toutes les places
 document.addEventListener("DOMContentLoaded", () => {
     checkAuthentication(); // vérifie token et fetch places
 
-    // Initialize filter dropdown
-    document.getElementById('price-filter').value = 'all';
-
-    // Listener filtre prix
+    // Initialize filter dropdown + listener only on index page
     const filter = document.getElementById('price-filter');
     if (filter) {
+        filter.value = 'all';
         filter.addEventListener('change', applyPriceFilter);
     }
 
@@ -86,7 +84,7 @@ function getCookie(name) {
 // ------------------------------
 async function loginUser(email, password) {
     try {
-        const response = await fetch('http://localhost:5000/api/v1/auth/login/', {
+        const response = await fetch('http://localhost:5000/api/v1/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
