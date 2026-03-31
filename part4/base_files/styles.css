@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   VARIABLES POUR LES COULEURS
+   ========================= */
+:root {
+    /* Fond général */
+    --main-bg-color: #f4f6f8;
+
+    /* Header / navigation */
+    --header-bg-color: #1f2a44;
+    --header-text-color: #ffffff;
+    --nav-link-color: #e8edf5;
+    --nav-link-hover-color: #ffd166;
+
+    /* Cartes (places et reviews) */
+    --card-bg-color: #ffffff;
+    --card-border-color: #d7dee8;
+    --card-shadow-color: rgba(31, 42, 68, 0.1);
+
+    /* Boutons et liens principaux */
+    --primary-color: #e67e22;
+    --primary-hover-color: #ca6a18;
+
+    /* Texte */
+    --text-color: #172033;
+    --secondary-text-color: #52607a;
+
+    /* Étoiles / ratings */
+    --rating-color: #f4b400;
+}
+
+/* =========================
+   BODY
+   ========================= */
+body {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    font-family: "Montserrat", "Arial", "Poppins";
+}
+
+/* =========================
+   HEADER & NAVIGATION
+   ========================= */
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    height: 50px;
+}
+
+nav a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+nav a:hover {
+    color: var(--nav-link-hover-color);
+}
+
+/* =========================
+   MAIN
+   ========================= */
+main {
+    padding: 2rem;
+}
+
+/* =========================
+   CARDS: PLACE & REVIEW
+   ========================= */
+.place-card,
+.review-card {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    margin: 20px;
+    /* Fixed parameter */
+    padding: 10px;
+    /* Fixed parameter */
+    border: 1px solid var(--card-border-color);
+    /* Fixed parameter */
+    border-radius: 10px;
+    /* Fixed parameter */
+    box-shadow: 0 2px 5px var(--card-shadow-color);
+}
+
+/* =========================
+   PLACE DETAILS
+   ========================= */
+.place-details,
+.place-info {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid var(--card-border-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--card-shadow-color);
+}
+
+.place-details h1,
+.place-info h2 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.place-details p,
+.place-info p {
+    margin: 10px 0;
+    color: var(--secondary-text-color);
+    line-height: 1.6;
+}
+
+/* =========================
+   PLACE REVIEWS
+   ========================= */
+.place-reviews {
+    margin-top: 30px;
+}
+
+.place-reviews h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* =========================
+   ADD REVIEW SECTION
+   ========================= */
+.add-review {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    margin: 30px 0;
+    border: 1px solid var(--card-border-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--card-shadow-color);
+}
+
+.add-review h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* =========================
+   BOUTONS
+   ========================= */
+button,
+.details-button,
+.add-review-button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+.details-button:hover,
+.add-review-button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* =========================
+   FORMULAIRES
+   ========================= */
+form.form {
+    margin-top: 20px;
+}
+
+form.form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+form.form input,
+form.form textarea,
+form.form select {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+form.form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+form.form button {
+    margin-top: 15px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    margin-top: 2rem;
+}

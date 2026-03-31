@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <!-- Navigation -->
+            <img src="images/logo.png" alt="logo" class="logo">
+            <!-- Navigation -->
+            <nav>
+                <a href="index.html" id="index-link">Index</a>
+                <a href="login.html" id="login-link">Login</a>
+            </nav>
+            <!-- Bouton login -->
+            <a href="login.html" class="login-button">Login</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Add something to idfentify the place you're reviewing -->
+        <form class="form" id="review-form">
+            <h2>Add a Review</h2>
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" required></textarea>
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <!-- Options for rating -->
+            </select>
+            <button type="submit">Submit Review</button>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <p>All rights reserved</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
